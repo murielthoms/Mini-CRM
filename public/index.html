@@ -7,12 +7,45 @@
 	<link rel="stylesheet" type="text/css" href="node_modules/semantic-ui-css/semantic.css">
 </head>
 <body>
+	<div id="informations"></div>
+	<h1>FORMULAIRE</h1>
+	<form class="ui big form" action="/users" method="post">
+	<div class="ui field">
+			<input type="hidden" name="id" value="">
+		</div>
 
-<div id="informations"></div>
+		<div class="four fields">
+			<div class="field">
+				<label for="nom">Nom</label>
+				<input id="nom" type="text" name="nom">
+			</div>
+			<div class="field">
+				<label for="prenom">Prénom</label>
+				<input id="prenom" type="text" name="prenom">
+			</div>
+			<div class="field">
+				<label for="phone">Téléphone</label>
+				<input id="phone" type="text" name="phone">
+			</div>
+			<div class="field">
+				<label for="mail">Mail</label>
+				<input id="mail" type="text" name="mail">
+			</div>
+		</div>
+		<div class="field">
+			<label for="description">Description</label>
+			<textarea name="description" placeholder="Entrez votre texte ici..." cols="30" rows="10" id="description"></textarea>
+		</div>
+
+		<button class="ui submit button" id="valider">Valider</button>
+	</div>
 </div>
+</form>
 
 
-	<script src="node_modules/jquery/dist/jquery.js"></script>
-	<script src="app.js"></script>
+
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
