@@ -5,14 +5,13 @@ var fs = require('fs');
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
-// app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser());
 
 
 app.post('/users', function(req, res){
 	
 // fs = interagir dossier système; 
-// 1 argument:nom du dossier 2 argument:callback;
+// 1 argument:nom du dossier 2eme argument:callback;
 // le callback prend 2 fonctions: err,data.
 fs.readFileSync('public/crm.json', 'utf8',function(err,data){
 	if (err){
